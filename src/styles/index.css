@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  --bg-obsidian: #050505;
+  --bg-sidebar: #080809;
+  --bg-card: #0D0D0F;
+  --bg-elevated: #111113;
+  --bg-composer: #171719;
+  --bg-hover: #1D1D20;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #E8E8EA;
+  --text-muted: #B8B8BD;
+  --text-dim: #88888F;
+  --text-faint: #66666D;
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-medium: rgba(255, 255, 255, 0.08);
+  --border-prominent: rgba(255, 255, 255, 0.12);
+
+  --accent-amber: #FF8A24;
+  --accent-amber-light: #F89A52;
+
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-display: "BubbledotICG-FinePos", "Geist Pixel Circle", monospace;
+}
+
+body {
+  background-color: var(--bg-obsidian);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  selection-background-color: rgba(255, 138, 36, 0.25);
+  selection-color: #ffffff;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Hide scrollbars for clean rails */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Voice Orb Animations */
+@keyframes orbBreathing {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 25px rgba(255, 138, 36, 0.15), inset 0 0 15px rgba(255, 138, 36, 0.1);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 45px rgba(255, 138, 36, 0.28), inset 0 0 25px rgba(255, 138, 36, 0.2);
+  }
+}
+
+@keyframes ripplePulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+@keyframes listeningWave {
+  0%, 100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-orb-breath {
+  animation: orbBreathing 3.5s infinite ease-in-out;
+}
+
+.animate-ripple-1 {
+  animation: ripplePulse 2s infinite cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.animate-ripple-2 {
+  animation: ripplePulse 2s infinite 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.animate-ripple-3 {
+  animation: ripplePulse 2s infinite 1.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Respect accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

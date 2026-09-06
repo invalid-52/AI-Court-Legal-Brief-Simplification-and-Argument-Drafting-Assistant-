@@ -1,0 +1,92 @@
+[
+  {
+    "id": "contract-formation",
+    "title": "Contract formation — general framework",
+    "jurisdiction": "India (Common Law)",
+    "subject": "Contract Law",
+    "text": "Educational doctrine note: contract-formation analysis commonly considers offer, acceptance, consideration where applicable, intention, capacity, and whether the parties manifested sufficiently definite assent. Apply only the elements supported by the supplied facts.",
+    "source": "Curated educational doctrine note",
+    "source_type": "General legal principle",
+    "verification": "Verify against the current official law and course materials before relying on this note."
+  },
+  {
+    "id": "contract-breach",
+    "title": "Breach — general analytical framework",
+    "jurisdiction": "India (Common Law)",
+    "subject": "Contract Law",
+    "text": "Educational doctrine note: breach analysis asks what obligation was undertaken, whether the relevant performance occurred, whether non-performance is legally excused, and what consequences may follow. Separate factual proof from the legal characterization of the conduct.",
+    "source": "Curated educational doctrine note",
+    "source_type": "General legal principle",
+    "verification": "Verify the governing statute, contract terms, and current authorities separately."
+  },
+  {
+    "id": "constitutional-proportionality",
+    "title": "Proportionality — general constitutional reasoning",
+    "jurisdiction": "India (Common Law)",
+    "subject": "Constitutional Law",
+    "text": "Educational doctrine note: proportionality analysis may examine whether a rights-limiting measure pursues a legitimate objective, has a rational connection to that objective, is suitably necessary, and maintains an appropriate balance between competing interests. The precise test depends on the governing jurisdiction and context.",
+    "source": "Curated educational doctrine note",
+    "source_type": "General legal principle",
+    "verification": "Verify the applicable constitutional provision and current judicial formulation."
+  },
+  {
+    "id": "criminal-elements",
+    "title": "Criminal liability — elements-first analysis",
+    "jurisdiction": "India (Common Law)",
+    "subject": "Criminal Law",
+    "text": "Educational doctrine note: criminal analysis generally separates the prohibited conduct or act element from the required mental element, then considers causation, defenses, and the applicable burden and standard of proof. Do not infer an element that is absent from the supplied facts.",
+    "source": "Curated educational doctrine note",
+    "source_type": "General legal principle",
+    "verification": "Verify the current offence definition and procedural rules before relying on this note."
+  },
+  {
+    "id": "tort-negligence",
+    "title": "Negligence — general framework",
+    "jurisdiction": "General Common Law",
+    "subject": "Tort Law",
+    "text": "Educational doctrine note: negligence reasoning commonly considers duty, breach of the applicable standard, factual and legal causation, and legally recognized damage. The content and formulation of each element vary by jurisdiction and claim.",
+    "source": "Curated educational doctrine note",
+    "source_type": "General legal principle",
+    "verification": "Verify the jurisdiction-specific duty, causation, defenses, and remedy rules."
+  },
+  {
+    "id": "contract-formation-us",
+    "title": "Contract formation — U.S. educational framework",
+    "jurisdiction": "United States",
+    "subject": "Contract Law",
+    "text": "Educational doctrine note: a U.S. contract-formation analysis may examine offer, acceptance, consideration, intent, definiteness, and applicable defenses. The governing rules can differ across common law and statutory contexts.",
+    "source": "Curated educational doctrine note",
+    "source_type": "General legal principle",
+    "verification": "Verify the relevant state or federal authority and current course materials."
+  },
+  {
+    "id": "criminal-elements-us",
+    "title": "Criminal liability — U.S. elements-first framework",
+    "jurisdiction": "United States",
+    "subject": "Criminal Law",
+    "text": "Educational doctrine note: criminal analysis should identify the precise offence elements, required mental state, causation where relevant, defenses, and the prosecution's applicable burden. The elements depend on the governing jurisdiction and offence.",
+    "source": "Curated educational doctrine note",
+    "source_type": "General legal principle",
+    "verification": "Verify the governing code, jurisdiction, and current authority."
+  },
+  {
+    "id": "constitutional-speech-us",
+    "title": "Free-expression analysis — issue spotting",
+    "jurisdiction": "United States",
+    "subject": "Constitutional Law",
+    "text": "Educational doctrine note: free-expression problems require identifying the governmental action, protected activity, applicable level of scrutiny or doctrinal test, relevant exceptions, and the facts supporting each element. The exact framework is context dependent.",
+    "source": "Curated educational doctrine note",
+    "source_type": "General legal principle",
+    "verification": "Verify the applicable constitutional text and current controlling authority."
+  },
+  {
+    "id": "universal-irac",
+    "title": "IRAC reasoning discipline",
+    "jurisdiction": "General",
+    "subject": "General Legal Reasoning",
+    "text": "Educational reasoning note: identify one precise issue, state only the rule or test supported by the available sources, connect each material fact to an element, and conclude with the strength and limits of the analysis. Keep assumptions visibly separate from supplied facts.",
+    "source": "Lexora educational reasoning methodology",
+    "source_type": "Methodology",
+    "verification": "This is a study aid, not legal authority."
+  }
+]

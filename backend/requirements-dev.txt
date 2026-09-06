@@ -1,0 +1,3 @@
+# Optional submission-quality test dependencies.
+# Runtime dependencies remain in backend/requirements.txt and are unchanged.
+pytest>=8.0

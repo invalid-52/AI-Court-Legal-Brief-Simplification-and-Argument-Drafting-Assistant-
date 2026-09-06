@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lexora Source-Aware Legal Learning</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:960px;margin:0 auto;padding:32px;color:#1f2430;background:#faf9ff}
+    main{background:#fff;padding:28px;border-radius:18px;box-shadow:0 8px 30px #00000012}
+    textarea,input{width:100%;box-sizing:border-box;padding:12px;border:1px solid #d8d8e3;border-radius:10px;margin:8px 0 16px}
+    button{padding:11px 18px;border:0;border-radius:10px;cursor:pointer} article{padding:16px;border:1px solid #e5e5ef;border-radius:12px;margin-top:14px}
+    small{color:#606575}.notice{padding:12px;background:#fff7d6;border-radius:10px;margin:14px 0}
+  </style>
+</head>
+<body>
+<main>
+  <h1>⚖️ Lexora Source-Aware Legal Learning</h1>
+  <p class="notice"><strong>Educational only:</strong> retrieved material is a study aid, not legal advice or authoritative legal research. Verify current law independently.</p>
+  <label>Learning query</label>
+  <textarea id="query" rows="4" placeholder="e.g. offer, acceptance, breach and consideration"></textarea>
+  <label>Jurisdiction (optional)</label><input id="jurisdiction" value="India (Common Law)">
+  <label>Subject (optional)</label><input id="subject" value="Contract Law">
+  <button id="search">Retrieve source-aware context</button>
+  <section id="results"></section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+$('search').onclick=async()=>{
+  const query=$('query').value.trim(); if(query.length<3){$('results').innerHTML='<p>Enter at least 3 characters.</p>';return;}
+  $('results').innerHTML='<p>Retrieving…</p>';
+  try{
+    const r=await fetch('/api/learning/retrieve',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query,jurisdiction:$('jurisdiction').value,subject:$('subject').value,top_k:4})});
+    const d=await r.json(); if(!r.ok) throw new Error(d.detail||d.error||'Request failed');
+    $('results').innerHTML=d.matches.map(x=>`<article><h3>${escapeHtml(x.title)}</h3><p>${escapeHtml(x.text)}</p><small>Source: ${escapeHtml(x.source)} · ${escapeHtml(x.jurisdiction)} · relevance ${x.relevanceScore}</small><p><strong>Verification:</strong> ${escapeHtml(x.verification)}</p></article>`).join('')||'<p>No matching educational notes found.</p>';
+  }catch(e){$('results').innerHTML='<p>'+escapeHtml(e.message)+'</p>';}
+};
+function escapeHtml(s){return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+</script>
+</body>
+</html>
